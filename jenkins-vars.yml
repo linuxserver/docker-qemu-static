@@ -1,0 +1,21 @@
+---
+
+# jenkins variables
+project_name: docker-qemu-static
+external_type: na
+custom_version_command: "echo 9.0.2+ds-1~bpo12+1"
+release_type: stable
+release_tag: latest
+ls_branch: master
+build_armhf: false
+repo_vars:
+  - BUILD_VERSION_ARG = 'QEMU_VERSION'
+  - LS_USER = 'linuxserver'
+  - LS_REPO = 'docker-qemu-static'
+  - CONTAINER_NAME = 'qemu-static'
+  - DOCKERHUB_IMAGE = 'linuxserver/qemu-static'
+  - DEV_DOCKERHUB_IMAGE = 'lsiodev/qemu-static'
+  - PR_DOCKERHUB_IMAGE = 'lspipepr/qemu-static'
+  - DIST_IMAGE = 'alpine'
+  - MULTIARCH='false'
+  - CI='false'
