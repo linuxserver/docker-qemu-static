@@ -38,7 +38,7 @@ full_custom_readme: |
   [![Docker Stars](https://img.shields.io/docker/stars/linuxserver/qemu-static.svg?color=94398d&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=stars&logo=docker)](https://hub.docker.com/r/linuxserver/qemu-static)
   [![Jenkins Build](https://img.shields.io/jenkins/build?labelColor=555555&logoColor=ffffff&style=for-the-badge&jobUrl=https%3A%2F%2Fci.linuxserver.io%2Fjob%2FDocker-Pipeline-Builders%2Fjob%2Fdocker-qemu-static%2Fjob%2Fmaster%2F&logo=jenkins)](https://ci.linuxserver.io/job/Docker-Pipeline-Builders/job/docker-qemu-static/job/master/)
 
-  [QEMU Static](https://www.qemu.org/) - Run multiple architectures of Docker containers on an x86_64 host using QEMU static.
+  [QEMU Static](https://www.qemu.org/) - Run multiple architectures of Docker containers on an x86_64 or aarch64 host using QEMU static.
   
   [![qemu-static](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/qemu-logo.png)](https://www.qemu.org/)
 
