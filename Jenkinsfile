@@ -27,7 +27,7 @@ pipeline {
     DEV_DOCKERHUB_IMAGE = 'lsiodev/qemu-static'
     PR_DOCKERHUB_IMAGE = 'lspipepr/qemu-static'
     DIST_IMAGE = 'alpine'
-    MULTIARCH='false'
+    MULTIARCH='true'
     CI='false'
   }
   stages {
