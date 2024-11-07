@@ -2,7 +2,7 @@
 
 FROM debian:bookworm AS buildstage
 
-ARG QEMU_VERSION="9.0.2+ds-1~bpo12+1"
+ARG QEMU_VERSION="9.1.1+ds-2~bpo12+1"
 
 RUN \
   echo "**** install build deps ****" && \
@@ -18,7 +18,7 @@ RUN \
     /tmp/qemu && \
   curl -o \
   /tmp/qemu.deb -L \
-    "http://ftp.de.debian.org/debian/pool/main/q/qemu/qemu-user-static_${QEMU_VERSION}_arm64.deb" && \
+    "http://ftp.de.debian.org/debian/pool/main/q/qemu/qemu-user_${QEMU_VERSION}_arm64.deb" && \
   cd /tmp && \
   dpkg-deb -R \
     qemu.deb \
