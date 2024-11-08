@@ -2,7 +2,7 @@
 
 FROM debian:bookworm AS buildstage
 
-ARG QEMU_VERSION="9.0.2+ds-1~bpo12+1"
+ARG QEMU_VERSION="9.1.1+ds-2~bpo12+1"
 
 RUN \
   echo "**** install build deps ****" && \
@@ -17,8 +17,8 @@ RUN \
     /build-out/usr/bin \
     /tmp/qemu && \
   curl -o \
-  /tmp/qemu.deb -L \
-    "http://ftp.de.debian.org/debian/pool/main/q/qemu/qemu-user-static_${QEMU_VERSION}_arm64.deb" && \
+    /tmp/qemu.deb -L \
+    "http://ftp.de.debian.org/debian/pool/main/q/qemu/qemu-user_${QEMU_VERSION}_arm64.deb" && \
   cd /tmp && \
   dpkg-deb -R \
     qemu.deb \
@@ -27,7 +27,7 @@ RUN \
     /tmp/qemu/usr/bin/* \
     /build-out/qemu && \
   curl -o \
-  /build-out/usr/bin/qemu-binfmt-conf -L \
+    /build-out/usr/bin/qemu-binfmt-conf -L \
     "https://raw.githubusercontent.com/qemu/qemu/refs/heads/master/scripts/qemu-binfmt-conf.sh" && \
   chmod +x /build-out/usr/bin/qemu-binfmt-conf
 

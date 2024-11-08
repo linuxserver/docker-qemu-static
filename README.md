@@ -67,4 +67,5 @@ docker run --rm -it \
 ```
 ## Versions
 
+* **07.11.24:** - Upgrade to 9.1.1, switch to new debian package and bin naming scheme.
 * **14.10.24:** - Initial release.
