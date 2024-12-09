@@ -3,11 +3,10 @@
 # jenkins variables
 project_name: docker-qemu-static
 external_type: na
-custom_version_command: "echo 9.1.1+ds-2~bpo12+1"
+custom_version_command: "echo 9.1.2+ds-1~bpo12+1"
 release_type: stable
 release_tag: latest
 ls_branch: master
-build_armhf: false
 repo_vars:
   - BUILD_VERSION_ARG = 'QEMU_VERSION'
   - LS_USER = 'linuxserver'

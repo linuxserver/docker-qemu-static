@@ -2,7 +2,7 @@
 
 FROM debian:bookworm AS buildstage
 
-ARG QEMU_VERSION="9.1.1+ds-2~bpo12+1"
+ARG QEMU_VERSION="9.1.2+ds-1~bpo12+1"
 
 RUN \
   echo "**** install build deps ****" && \

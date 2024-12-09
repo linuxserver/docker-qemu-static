@@ -124,7 +124,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' echo 9.1.1+ds-2~bpo12+1 ''',
+            script: ''' echo 9.1.2+ds-1~bpo12+1 ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }
