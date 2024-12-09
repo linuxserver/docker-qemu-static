@@ -18,7 +18,7 @@ RUN \
     /build-out/usr/bin \
     /tmp/qemu && \
   if [ -z "${QEMU_VERSION}" ]; then \
-    QEMU_VERSION=$(curl -sX GET https://deb.debian.org/debian/dists/bookworm-backports/main/binary-amd64/Packages.xz | xz -dc |grep -A 7 -m 2 'Package: qemu-user$' | awk -F ': ' '/Version/{print $2;exit}'); \
+    QEMU_VERSION=$(curl -sX GET https://deb.debian.org/debian/dists/bookworm-backports/main/binary-amd64/Packages.xz | xz -dc |grep -A 7 -m 2 'Package: qemu-user$' | awk -F ': ' '/Version/{print $2;exit}' | awk -F ':' '{print $2}'); \
   fi && \
   curl -o \
     /tmp/qemu.deb -L \
