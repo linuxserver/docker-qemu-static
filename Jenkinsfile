@@ -124,7 +124,7 @@ pipeline {
       steps{
         script{
           env.EXT_RELEASE = sh(
-            script: ''' echo 9.1.2+ds-1~bpo12+1 ''',
+            script: ''' curl -sX GET https://deb.debian.org/debian/dists/bookworm-backports/main/binary-amd64/Packages.xz | xz -dc |grep -A 7 -m 2 'Package: qemu-user$' | awk -F ': ' '/Version/{print $2;exit}' ''',
             returnStdout: true).trim()
             env.RELEASE_LINK = 'custom_command'
         }

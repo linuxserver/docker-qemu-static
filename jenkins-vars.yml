@@ -3,7 +3,7 @@
 # jenkins variables
 project_name: docker-qemu-static
 external_type: na
-custom_version_command: "echo 9.1.2+ds-1~bpo12+1"
+custom_version_command: "curl -sX GET https://deb.debian.org/debian/dists/bookworm-backports/main/binary-amd64/Packages.xz | xz -dc |grep -A 7 -m 2 'Package: qemu-user$' | awk -F ': ' '/Version/{print $2;exit}'"
 release_type: stable
 release_tag: latest
 ls_branch: master
