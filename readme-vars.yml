@@ -2,7 +2,8 @@
 
 # project information
 project_name: qemu-static
-project_description: Run multiple architectures of Docker containers on an x86_64 or aarch64 host using QEMU static.
+project_blurb: Run multiple architectures of Docker containers on an x86_64 or aarch64 host using QEMU static.
+project_categories: "Docker"
 full_custom_readme: |
   {% raw -%}
   [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)](https://linuxserver.io)
