@@ -2,6 +2,7 @@
 
 # project information
 project_name: qemu-static
+project_logo: "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/qemu-logo.png"
 project_blurb: Run multiple architectures of Docker containers on an x86_64 or aarch64 host using QEMU static.
 project_categories: "Docker"
 full_custom_readme: |
