@@ -7,6 +7,12 @@ custom_version_command: "curl -sX GET https://deb.debian.org/debian/dists/bookwo
 release_type: stable
 release_tag: latest
 ls_branch: master
+external_artifact_check: |
+  if curl -fL "http://deb.debian.org/debian/pool/main/q/qemu/qemu-user_${EXT_RELEASE}_amd64.deb" >/dev/null && curl -fL "http://deb.debian.org/debian/pool/main/q/qemu/qemu-user_${EXT_RELEASE}_arm64.deb" >/dev/null; then
+    artifacts_found="true"
+  else
+    artifacts_found="false"
+  fi
 repo_vars:
   - BUILD_VERSION_ARG = 'QEMU_VERSION'
   - LS_USER = 'linuxserver'
