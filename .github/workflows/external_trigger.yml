@@ -107,11 +107,6 @@ jobs:
             echo "New version \`${EXT_RELEASE}\` found; but there already seems to be an active build on Jenkins; exiting" >> $GITHUB_STEP_SUMMARY
             exit 0
           else
-            if curl -fL "http://deb.debian.org/debian/pool/main/q/qemu/qemu-user_${EXT_RELEASE}_amd64.deb" >/dev/null && curl -fL "http://deb.debian.org/debian/pool/main/q/qemu/qemu-user_${EXT_RELEASE}_arm64.deb" >/dev/null; then
-              artifacts_found="true"
-            else
-              artifacts_found="false"
-            fi
             if [[ "${artifacts_found}" == "false" ]]; then
               echo "> [!WARNING]" >> $GITHUB_STEP_SUMMARY
               echo "> New version detected, but not all artifacts are published yet; skipping trigger" >> $GITHUB_STEP_SUMMARY
