@@ -53,7 +53,7 @@ The architectures supported by this image are:
 
 ## Usage
 
-Unlike most of our container library this image is meant to be run ephemerally from the command line to enable the underlying host to run containers built for different architechtures. Changes will no persist a host reboot.
+Unlike most of our container library this image is meant to be run ephemerally from the command line to enable the underlying host to run containers built for different architechtures. Changes will not persist a host reboot.
 
 ### Enable and reset
 
